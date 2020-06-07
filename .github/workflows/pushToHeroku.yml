@@ -25,8 +25,8 @@ jobs:
     # Runs a single command using the runners shell
     - name: Push To Heroku
       env:
-        HEROKU_API_TOKEN: ${{ secrets.HEROKU_OAUTH_TOKEN }}
+        HEROKU_OAUTH_TOKEN: ${{ secrets.HEROKU_OAUTH_TOKEN }}
         HEROKU_APP_NAME: "my-bingo-game"
       if: github.ref == 'refs/heads/master' && job.status == 'success'
-      run: git pull && git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
+      run: git push https://heroku:$HEROKU_OAUTH_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
 
