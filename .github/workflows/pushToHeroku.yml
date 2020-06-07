@@ -21,12 +21,18 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
-
+    
+    - name: Add remote origin
+      run: |
+        git remote add heroku https://heroku:${{ secrets.HEROKU_OAUTH_TOKEN }}@git.heroku.com/my-bingo-game.git
+    - name: Deploy to Heroku
+      run: |
+        git push heroku HEAD:master -f
     # Runs a single command using the runners shell
-    - name: Push To Heroku
-      env:
-        HEROKU_OAUTH_TOKEN: ${{ secrets.HEROKU_OAUTH_TOKEN }}
-        HEROKU_APP_NAME: "my-bingo-game"
-      if: github.ref == 'refs/heads/master' && job.status == 'success'
-      run: git push --force https://heroku:$HEROKU_OAUTH_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git master:master
+#     - name: Push To Heroku
+#       env:
+#         HEROKU_OAUTH_TOKEN: ${{  }}
+#         HEROKU_APP_NAME: "my-bingo-game"
+#       if: github.ref == 'refs/heads/master' && job.status == 'success'
+#       run: git push --force https://heroku:$HEROKU_OAUTH_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git master:master
 
