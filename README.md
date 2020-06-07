@@ -1,24 +1,7 @@
 # my-bingo-game
 
-## Project setup
-```
-npm install
-```
+![.github/workflows/pushToHeroku.yml](https://github.com/Pranomvignesh/my-bingo-game/workflows/.github/workflows/pushToHeroku.yml/badge.svg)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+This is my game created in Vue js 
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Please go to this [link](https://my-bingo-game.herokuapp.com)
