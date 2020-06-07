@@ -3,7 +3,7 @@ const bodyParser    = require('body-parser');
 const path          = require('path');
 const http          = require('http');
 const app           = express();
-const PORT          = process.env.port||4000;
+const PORT          = process.env.PORT||4000;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/',express.static(path.join(__dirname,'dist')));
