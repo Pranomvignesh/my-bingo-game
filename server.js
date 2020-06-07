@@ -11,4 +11,4 @@ app.get('/',function(request,response){
     response.send(path.join(__dirname,'dist/index.html'));
 })
 http.createServer(app).listen(PORT);
-console.log(`Server running in http://localhost:${PORT}/`);
+console.log(`Server running in port:${PORT}/`);
