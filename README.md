@@ -1,4 +1,4 @@
-# my-bingo-game - by Pranomvignesh
+# my-bingo-game - by Pranomvignesh(pranomvignesh@gmail.com)
 
 ![.github/workflows/pushToHeroku.yml](https://github.com/Pranomvignesh/my-bingo-game/workflows/.github/workflows/pushToHeroku.yml/badge.svg)
 
