@@ -23,6 +23,11 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
+    - name: Pull from Heroku
+      env:
+        HEROKU_OAUTH_TOKEN: ${{ secrets.HEROKU_OAUTH_TOKEN }}
+        HEROKU_APP_NAME: "my-bingo-game"
+      run: git pull https://heroku:$HEROKU_OAUTH_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git
     - name: Push To Heroku
       env:
         HEROKU_OAUTH_TOKEN: ${{ secrets.HEROKU_OAUTH_TOKEN }}
