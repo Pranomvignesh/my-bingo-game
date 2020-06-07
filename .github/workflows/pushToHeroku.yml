@@ -25,9 +25,9 @@ jobs:
     - name: Add remote origin
       run: |
         git remote add heroku https://heroku:${{ secrets.HEROKU_OAUTH_TOKEN }}@git.heroku.com/my-bingo-game.git
+        git fetch --all --unshallow
     - name: Deploy to Heroku
       run: |
-        git fetch --all --unshallow
         git push heroku master -f
     # Runs a single command using the runners shell
 #     - name: Push To Heroku
