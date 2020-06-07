@@ -6,14 +6,18 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "vue-cli-service serve"
+    "start": "vue-cli-service build && node server.js"
   },
-  "engines":{
-    "node":"12.x",
-    "npm":"6.x"
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
     "register-service-worker": "^1.7.1",
+    "socket.io": "^2.3.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
