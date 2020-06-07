@@ -1,6 +1,6 @@
 # my-bingo-game - by Pranomvignesh(pranomvignesh@gmail.com)
 
-![.github/workflows/pushToHeroku.yml](https://github.com/Pranomvignesh/my-bingo-game/workflows/.github/workflows/pushToHeroku.yml/badge.svg)
+![Push To Heroku](https://github.com/Pranomvignesh/my-bingo-game/workflows/Push%20To%20Heroku/badge.svg)
 
 This is my game created in Vue js 
 
