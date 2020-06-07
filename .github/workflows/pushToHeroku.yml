@@ -28,5 +28,5 @@ jobs:
         HEROKU_OAUTH_TOKEN: ${{ secrets.HEROKU_OAUTH_TOKEN }}
         HEROKU_APP_NAME: "my-bingo-game"
       if: github.ref == 'refs/heads/master' && job.status == 'success'
-      run: git fetch --all --unshallow && git push --force https://heroku:$HEROKU_OAUTH_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
+      run: git push --force https://heroku:$HEROKU_OAUTH_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git master:master
 
