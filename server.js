@@ -3,6 +3,9 @@ const bodyParser    = require('body-parser');
 const path          = require('path');
 const socket        = require("socket.io");
 const http          = require('http');
+const uuid          = require('./class/uuid');
+// const Game          = require('./class/game');
+// const listOfGames   = [];
 const app           = express();
 const PORT          = process.env.PORT||4000;
 app.use(bodyParser.json());
@@ -15,11 +18,7 @@ const server = http.createServer(app).listen(PORT);
 console.log(`Server running in port:${PORT}/`);
 const io = socket(server);
 io.on('connection',function(socket){
-    console.log('made connection with ' + socket.id);
-    socket.on('test',function(data){
-        console.log(data)
-        io.emit('broadcast',{
-            value : 'From server '+data.value
-        })
+    socket.emit('username',{
+        username : uuid.forUser()
     })
 })
