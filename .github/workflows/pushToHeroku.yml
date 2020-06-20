@@ -29,7 +29,7 @@ jobs:
         git add . 
         git config --global user.email "${{secrets.MAIL_ID}}"
         git config --global user.name "${{secrets.USERNAME}}"
-        git commit -m "Builded App to push to heroku @$(date)"git s
+        git commit -m "Builded App to push to heroku @$(date)"
     - name: Add remote origin
       run: |
         git remote add heroku https://heroku:${{ secrets.HEROKU_OAUTH_TOKEN }}@git.heroku.com/my-bingo-game.git
