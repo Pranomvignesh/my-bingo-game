@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "start": "node server.js",
-    "removeDistFromIgnored" : "node removeDistFromIgnored"
+    "removeDistFromIgnored": "node removeDistFromIgnored"
   },
   "engines": {
     "node": "12.x",
@@ -32,6 +32,7 @@
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
     "lint-staged": "^9.5.0",
+    "nodemon": "^2.0.4",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
