@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "vue-cli-service build && node server.js"
+    "start": "node server.js",
+    "removeDistFromIgnored" : "node removeDistFromIgnored"
   },
   "engines": {
     "node": "12.x",
@@ -19,7 +20,9 @@
     "register-service-worker": "^1.7.1",
     "socket.io": "^2.3.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
+    "vue-router": "^3.2.0"
+  },
+  "devDependencies": {
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-plugin-pwa": "~4.4.0",
     "@vue/cli-plugin-router": "~4.4.0",
@@ -30,8 +33,6 @@
     "less-loader": "^5.0.0",
     "lint-staged": "^9.5.0",
     "vue-template-compiler": "^2.6.11"
-  },
-  "devDependencies": {
   },
   "eslintConfig": {
     "root": true,
